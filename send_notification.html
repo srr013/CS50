@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Send Notifications
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('send_notification') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="recipient_user_id" placeholder="User ID" type="number"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="template_id" placeholder="Template ID" type="text"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="message_text" placeholder="Message Text" type="text"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="delay_seconds" placeholder="Seconds to delay message send" type="number"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Send Notification</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Active Notifications
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('active_notifications') }}" method="post">
+        <fieldset>
+            <table style="width:100%"
+                <th>
+                    <th>Notification Recipient</th>
+                    <th>Notification Type</th>
+                    <th>Send Instant</th>
+                    <th>Delay Seconds</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                </th>
+                {% for k in rows %}
+                <tr>
+                    <td>{{k["first_name"]," ",k["last_name"]}}</td>
+                    <td>{{k["notification_type"]}}</td>
+                    <td>{{k["send_instant"]}}</td>
+                    <td>{{k["delay_seconds"]}}</td>
+                    <td>{{k["message_text"]}}</td>
+                    <td>{{k["status"]}}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </fieldset>
+    </form>
+{% endblock %}

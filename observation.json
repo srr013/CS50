@@ -1,0 +1,72 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 3,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Observation?patient=Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB&code=8310-5"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Observation/Tnf7t0.SP6znu2Dc1kPsron.8Qlu-yjOF792bUBX3SIbqfiRJTmZfK.seS16W01szB",
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Observation/Tnf7t0.SP6znu2Dc1kPsron.8Qlu-yjOF792bUBX3SIbqfiRJTmZfK.seS16W01szB"
+        }
+      ],
+      "search": {
+        "mode": "match"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "effectiveDateTime": "2016-04-19T15:02:00Z",
+        "status": "final",
+        "id": "Tnf7t0.SP6znu2Dc1kPsron.8Qlu-yjOF792bUBX3SIbqfiRJTmZfK.seS16W01szB",
+        "code": {
+          "text": "Temp",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital Signs grouping"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 37,
+          "unit": "Cel",
+          "code": "Cel",
+          "system": "http://unitsofmeasure.org"
+        },
+        "subject": {
+          "display": "Jason Argonaut",
+          "reference": "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Patient/Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB"
+        },
+        "performer": [
+          {
+            "display": "MOORE, SEAN",
+            "reference": "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Practitioner/TItWfhjChtlo0pFh9nzctSQB"
+          }
+        ],
+        "category": {
+          "text": "Vital Signs",
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/observation-category",
+              "code": "vital-signs",
+              "display": "Vital Signs"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

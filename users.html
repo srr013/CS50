@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('users') }}" method="post">
+        <fieldset>
+            <table style="width:100%"
+                <th>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Active Status</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Admin</th>
+                </th>
+                {% for k in rows %}
+                <tr>
+                    <td>{{k["id"]}}</td>
+                    <td>{{k["username"]}}</td>
+                    <td>{{k["active_status"]}}</td>
+                    <td>{{k["first_name"]}}</td>
+                    <td>{{k["last_name"]}}</td>
+                    <td>{{k["phone_num"]}}</td>
+                    <td>{{k["is_admin"]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </fieldset>
+    </form>
+{% endblock %}

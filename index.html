@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('index') }}" method="post">
+        <fieldset>
+            Notify allows you to send messages to users from a web interface. This is intended in the future for use with a FHIR API to send messages to clinicians about patient events.<br/>
+            <br/>
+            Load your JSON file here
+            <input id="json_input" name="json_input" type="file" class="file">
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
