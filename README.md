@@ -4,3 +4,4 @@ to generate standard templates for different disease notifications then send a m
 at the right time by the right person. 
 
 This tool can accept a JSON or FHIR data feed as its source for notification details.
+The .py files were started from a class template.
